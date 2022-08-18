@@ -17,10 +17,16 @@ import { EmployeetableModuleModule } from './employeetable-module/employeetable-
 import { ViewemployeeModuleModule } from './viewemployee-module/viewemployee-module.module';
 import { EditemployeeComponent } from './editemployee-module/editemployee.component';
 import { EditemployeeModuleModule } from './editemployee-module/editemployee-module.module';
+import { DialogSavedComponent } from './dialog-saved/dialog-saved.component';
+import { DialogDeleteConfirmComponent } from './dialog-delete-confirm/dialog-delete-confirm.component';
+import { DialogSaveAskComponent } from './dialog-save-ask/dialog-save-ask.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogSavedComponent,
+    DialogDeleteConfirmComponent,
+    DialogSaveAskComponent
   ],
   imports: [
     BrowserModule,

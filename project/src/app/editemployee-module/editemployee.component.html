@@ -13,32 +13,33 @@
                 <span>
                     <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label>Fullname</mat-label>
-                        <input matInput name="fname" [(ngModel)]="emp.firstname"  #fullname="ngModel">
+                        <input matInput name="fname" [(ngModel)]="emp.firstname" #fullname="ngModel">
                     </mat-form-field>
                 </span>
 
                 <span>
                     <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label>Department</mat-label>
-                        <input matInput name="department" [(ngModel)]="emp.department"  #department="ngModel">
+                        <input matInput name="department" [(ngModel)]="emp.department" #department="ngModel">
                     </mat-form-field>
                 </span>
 
                 <span>
                     <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label>Pincode</mat-label>
-                        <input matInput name="pincode" [(ngModel)]="emp.pincode"  #pincode="ngModel">
+                        <input matInput name="pincode" [(ngModel)]="emp.pincode" #pincode="ngModel">
                     </mat-form-field>
                 </span>
                 <span>
                     <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label>Gender</mat-label>
-                        <input matInput name="gender" [(ngModel)]="emp.gender"  #gender="ngModel">
+                        <input matInput name="gender" [(ngModel)]="emp.gender" #gender="ngModel">
                     </mat-form-field>
                 </span>
             </ng-container>
             <button type="button" class="btn btn-outline-info" [routerLink]="['/employee']">Back to
                 list</button>
+            <button type="button" class="btn btn-outline-success" (click)="openDialog('0ms', '0ms')">Save</button>
         </div>
     </mat-card>
 </div>
