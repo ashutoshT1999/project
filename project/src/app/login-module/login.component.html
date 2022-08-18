@@ -9,11 +9,6 @@
                     <span style="color: red;">Please enter a valid email address</span>
                 </mat-error>
             </mat-form-field>
-            <!-- <input type="text" placeholder="Email" name="email" [(ngModel)]="email" required
-                #emailinput="ngModel" />
-            <mat-error *ngIf="">
-                <span style="color: red;">email/user does not exist</span>
-            </mat-error> -->
             <mat-form-field class="mb-4">
                 <input matInput type="password" placeholder="Password" name='password' [(ngModel)]="password" required
                     #passinput="ngModel">
@@ -21,11 +16,6 @@
                     <span style="color: red;"> Password is <strong>required</strong></span>
                 </mat-error>
             </mat-form-field>
-            <!-- <input type="password" placeholder="Password" name='password' [(ngModel)]="password" required
-                #passinput="ngModel" />
-            <mat-error *ngIf="passinput.hasError('required')">
-                <span style="color: red;"> Password is <strong>required</strong></span>
-            </mat-error> -->
             <button (click)="click()" type="submit">Sign
                 In</button>
             <mat-error *ngIf="_login==false">

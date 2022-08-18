@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     this._login = this._details.loggedin;
     // console.log(this._login);
     if (this._details.loggedin === true){
-      this.router.navigate(["/navbar"]);
+      this.router.navigate(["/employee"]);
     }
     else this._login===false;
   }

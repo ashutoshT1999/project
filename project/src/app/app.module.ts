@@ -11,7 +11,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { SignupModule } from './signup/signup.module';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+
+import { EmployeetableModuleModule } from './employeetable-module/employeetable-module.module';
+import { ViewemployeeModuleModule } from './viewemployee-module/viewemployee-module.module';
+import { EditemployeeComponent } from './editemployee-module/editemployee.component';
+import { EditemployeeModuleModule } from './editemployee-module/editemployee-module.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,7 @@ import {MatDialogModule} from '@angular/material/dialog';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, NavbarModuleModule, LoginModule, MatInputModule, MatFormFieldModule, FormsModule, SignupModule ,MatDialogModule
+    BrowserAnimationsModule, NavbarModuleModule, LoginModule, MatInputModule, MatFormFieldModule, FormsModule, SignupModule, MatDialogModule, EmployeetableModuleModule ,ViewemployeeModuleModule,EditemployeeModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,15 +6,16 @@ import { AppRoutingModule } from '../app-routing.module';
 
 
 
+
 @NgModule({
   declarations: [
     NavbarComponent
   ],
   imports: [
-    CommonModule
- ], 
- exports:[
-  NavbarComponent
- ]
+    CommonModule, AppRoutingModule
+  ],
+  exports: [
+    NavbarComponent
+  ]
 })
 export class NavbarModuleModule { }

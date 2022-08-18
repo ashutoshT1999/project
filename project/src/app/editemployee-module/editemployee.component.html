@@ -1,0 +1,15 @@
+<!-- <app-navbar></app-navbar> -->
+<mat-card class="example-card">
+    <ng-container *ngFor="let emp of empbyid">
+        <mat-card-title>Code : <span><input type="text" value="{{emp.code}}"></span>
+        </mat-card-title>
+        <mat-card-title>Fullname : <span><input type="text" value="{{emp.firstname+' '+emp.middlename+' '+emp.lastname}}"></span>
+        </mat-card-title>
+        <mat-card-title>Department : <span><input type="text" value="{{emp.department}}"></span>
+        </mat-card-title>
+        <mat-card-title>Pincode : <span><input type="text" value="{{emp.pincode}}"></span>
+        </mat-card-title>
+        <mat-card-title>Gender : <span><input type="text" value="{{emp.gender}}"></span>
+        </mat-card-title>
+    </ng-container>
+</mat-card>
