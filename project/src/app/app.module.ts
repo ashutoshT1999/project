@@ -20,13 +20,15 @@ import { EditemployeeModuleModule } from './editemployee-module/editemployee-mod
 import { DialogSavedComponent } from './dialog-saved/dialog-saved.component';
 import { DialogDeleteConfirmComponent } from './dialog-delete-confirm/dialog-delete-confirm.component';
 import { DialogSaveAskComponent } from './dialog-save-ask/dialog-save-ask.component';
+import { DialogDeleteAskComponent } from './dialog-delete-ask/dialog-delete-ask.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DialogSavedComponent,
     DialogDeleteConfirmComponent,
-    DialogSaveAskComponent
+    DialogSaveAskComponent,
+    DialogDeleteAskComponent
   ],
   imports: [
     BrowserModule,
