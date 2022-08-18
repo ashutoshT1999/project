@@ -1,15 +1,44 @@
-<!-- <app-navbar></app-navbar> -->
-<mat-card class="example-card">
-    <ng-container *ngFor="let emp of empbyid">
-        <mat-card-title>Code : <span><input type="text" value="{{emp.code}}"></span>
-        </mat-card-title>
-        <mat-card-title>Fullname : <span><input type="text" value="{{emp.firstname+' '+emp.middlename+' '+emp.lastname}}"></span>
-        </mat-card-title>
-        <mat-card-title>Department : <span><input type="text" value="{{emp.department}}"></span>
-        </mat-card-title>
-        <mat-card-title>Pincode : <span><input type="text" value="{{emp.pincode}}"></span>
-        </mat-card-title>
-        <mat-card-title>Gender : <span><input type="text" value="{{emp.gender}}"></span>
-        </mat-card-title>
-    </ng-container>
-</mat-card>
+<app-navbar></app-navbar>
+<div class="d-flex justify-content-center box">
+    <mat-card class="example-card">
+        <div class="d-flex justify-content-around flex-column ">
+            <ng-container *ngFor="let emp of empbyid">
+                <span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Employee code</mat-label>
+                        <input matInput name="code" [(ngModel)]="emp.code" #code="ngModel">
+                    </mat-form-field>
+                </span>
+
+                <span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Fullname</mat-label>
+                        <input matInput name="fname" [(ngModel)]="emp.firstname"  #fullname="ngModel">
+                    </mat-form-field>
+                </span>
+
+                <span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Department</mat-label>
+                        <input matInput name="department" [(ngModel)]="emp.department"  #department="ngModel">
+                    </mat-form-field>
+                </span>
+
+                <span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Pincode</mat-label>
+                        <input matInput name="pincode" [(ngModel)]="emp.pincode"  #pincode="ngModel">
+                    </mat-form-field>
+                </span>
+                <span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Gender</mat-label>
+                        <input matInput name="gender" [(ngModel)]="emp.gender"  #gender="ngModel">
+                    </mat-form-field>
+                </span>
+            </ng-container>
+            <button type="button" class="btn btn-outline-info" [routerLink]="['/employee']">Back to
+                list</button>
+        </div>
+    </mat-card>
+</div>
