@@ -19,7 +19,7 @@
             <button (click)="click()" type="submit">Sign
                 In</button>
             <mat-error *ngIf="_login==false">
-                <span style="color: red;">------> No user found ! <-------</span>
+                <span style="color: red;">The email address or username you entered isn't connected to an account.</span>
             </mat-error>
         </form>
     </div>

@@ -4,6 +4,7 @@ import { EmployeetableModuleComponent } from './employeetable-module.component';
 import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from '../app-routing.module';
 import { NavbarModuleModule } from '../navbar-module/navbar-module.module';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 
@@ -12,7 +13,7 @@ import { NavbarModuleModule } from '../navbar-module/navbar-module.module';
     EmployeetableModuleComponent
   ],
   imports: [
-    CommonModule,MatTableModule, AppRoutingModule , NavbarModuleModule
+    CommonModule,MatTableModule, AppRoutingModule , NavbarModuleModule,MatDividerModule
   ],
   exports: [
     EmployeetableModuleComponent
