@@ -14,6 +14,7 @@ export class EditemployeeComponent implements OnInit {
 
   empid: string | null = "";
   empbyid: any[] = [];
+  empbyapi: any[] = [];
   constructor(private _route: ActivatedRoute, private _empservice: empdata, public dialog: MatDialog) { }
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
@@ -27,8 +28,10 @@ export class EditemployeeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.empid = this._route.snapshot.paramMap.get('id');
-    this.empbyid = this._empservice.getempbyid(this.empid);
+    // this.empid = this._route.snapshot.paramMap.get('id');
+    // this.empbyid = this._empservice.getempbyid(this.empid);
+     this._empservice.getdata().subscribe((data)=>{this.empbyid = data.filter(x => x.code == this._route.snapshot.paramMap.get('id'))});
+    //  this.empbyid =this.empbyapi;
 
   }
 }

@@ -10,15 +10,15 @@ import { empdata } from '../employee-service/employee-service.component';
 })
 export class ViewemployeeComponent implements OnInit {
 
-  empid: string | null = "";
+  empid: string | null ="";
   empbyid:any[]=[];
   constructor(private _route: ActivatedRoute, private _empservice: empdata) { }
 
   ngOnInit(): void {
 
-    this.empid = this._route.snapshot.paramMap.get('id');
-    this.empbyid =this._empservice.getempbyid(this.empid);
-
+    // this.empid = this._route.snapshot.paramMap.get('id');
+    this._empservice.getdata().subscribe((data)=> this.empbyid = data.filter(x => x.code == this._route.snapshot.paramMap.get('id')));
+    // this.empbyid = this.empbyid.filter(x => x.code == this.empid);
   }
 
 }

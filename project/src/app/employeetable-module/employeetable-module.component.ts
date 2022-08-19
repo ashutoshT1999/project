@@ -1,3 +1,4 @@
+import { DataSource } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogDeleteAskComponent } from '../dialog-delete-ask/dialog-delete-ask.component';
@@ -10,6 +11,7 @@ import { empdata } from '../employee-service/employee-service.component';
   providers: [empdata]
 })
 export class EmployeetableModuleComponent implements OnInit {
+  employeedatabyapi: any[]=[];
 
   constructor(public _empdata: empdata, public dialog: MatDialog) { }
 
@@ -23,8 +25,12 @@ export class EmployeetableModuleComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this._empdata.getdata().subscribe((data) => { this.employeedatabyapi = data; });
   }
+
   displayedColumns: string[] = ['code', 'fullname', 'Actions'];
-  dataSource = this._empdata.getdata();
+  // dataSource = this._empdata.getdata();
+  // dataSource = this.employeedatabyapi;
+
 
 }

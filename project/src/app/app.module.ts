@@ -21,6 +21,9 @@ import { DialogSavedComponent } from './dialog-saved/dialog-saved.component';
 import { DialogDeleteConfirmComponent } from './dialog-delete-confirm/dialog-delete-confirm.component';
 import { DialogSaveAskComponent } from './dialog-save-ask/dialog-save-ask.component';
 import { DialogDeleteAskComponent } from './dialog-delete-ask/dialog-delete-ask.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientModule } from '@angular/common/http';
+import { employeedatabyapi } from './employee-service/employee.api.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,7 @@ import { DialogDeleteAskComponent } from './dialog-delete-ask/dialog-delete-ask.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, NavbarModuleModule, LoginModule, MatInputModule, MatFormFieldModule, FormsModule, SignupModule, MatDialogModule, EmployeetableModuleModule ,ViewemployeeModuleModule,EditemployeeModuleModule
+    BrowserAnimationsModule, NavbarModuleModule, LoginModule, MatInputModule, MatFormFieldModule, FormsModule, SignupModule, MatDialogModule, EmployeetableModuleModule, ViewemployeeModuleModule, EditemployeeModuleModule, HttpClientInMemoryWebApiModule.forRoot(employeedatabyapi), HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
