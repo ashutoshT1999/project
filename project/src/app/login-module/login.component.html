@@ -3,18 +3,18 @@
         <form action="#" #login="ngForm" (ngSubmit)="saveLogin(login)">
             <h1 style="font-size:35px;margin-bottom: 40px;">Sign in</h1>
             <mat-form-field style="margin-bottom:15px;" class="example-full-width">
-                <input matInput type="email" placeholder="Email" name="email" [(ngModel)]="email" required
+                <input matInput type="email" placeholder="Email" name="email" [(ngModel)]="email" 
                     #emailinput="ngModel">
-                <mat-error *ngIf="emailinput.hasError('required')">
+                <!-- <mat-error *ngIf="emailinput.hasError('required')">
                     <span style="color: red;">Please enter a valid email address</span>
-                </mat-error>
+                </mat-error> -->
             </mat-form-field>
             <mat-form-field class="mb-4">
-                <input matInput type="password" placeholder="Password" name='password' [(ngModel)]="password" required
+                <input matInput type="password" placeholder="Password" name='password' [(ngModel)]="password" 
                     #passinput="ngModel">
-                <mat-error *ngIf="passinput.hasError('required')">
+                <!-- <mat-error *ngIf="passinput.hasError('required')">
                     <span style="color: red;"> Password is <strong>required</strong></span>
-                </mat-error>
+                </mat-error> -->
             </mat-form-field>
             <button (click)="click()" type="submit">Sign
                 In</button>
