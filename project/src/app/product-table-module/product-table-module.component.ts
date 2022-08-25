@@ -16,6 +16,6 @@ export class ProductTableModuleComponent implements OnInit {
     this._productdata.getdata().subscribe((data)=>this.productdatabyapi = data);
   }
 
-  displayedColumns: string[] = ['productCategory', 'productName','btn'];
+  displayedColumns: string[] = ['img','productCategory', 'productName','btn'];
   // dataSource = this._productdata.getdata();
 }

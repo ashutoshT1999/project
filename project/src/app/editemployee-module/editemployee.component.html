@@ -9,26 +9,26 @@
                     <span class="m-3">
                         <mat-form-field class="example-full-width " appearance="outline">
                             <mat-label>Employee code</mat-label>
-                            <input matInput name="code" [(ngModel)]="emp.code" #code="ngModel">
+                            <input matInput name="code" [(ngModel)]="emp.code" #code="ngModel" [disabled]="true">
                         </mat-form-field>
                     </span>
 
                     <span class="m-3">
-                        <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Firstname</mat-label>
                             <input matInput name="fname" [(ngModel)]="emp.firstname" #firstname="ngModel">
                         </mat-form-field>
                     </span>
 
                     <span class="m-3">
-                        <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>middlename</mat-label>
                             <input matInput name="mname" [(ngModel)]="emp.middlename" #middlename="ngModel">
                         </mat-form-field>
                     </span>
 
                     <span class="m-3">
-                        <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Lastname</mat-label>
                             <input matInput name="lname" [(ngModel)]="emp.lastname" #lastname="ngModel">
                         </mat-form-field>
@@ -36,20 +36,20 @@
                 </div>
                 <div class="d-flex justify-content-evenly ">
                     <span>
-                        <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Department</mat-label>
                             <input matInput name="department" [(ngModel)]="emp.department" #department="ngModel">
                         </mat-form-field>
                     </span>
 
                     <span >
-                        <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Pincode</mat-label>
                             <input matInput name="pincode" [(ngModel)]="emp.pincode" #pincode="ngModel">
                         </mat-form-field>
                     </span>
                     <span >
-                        <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Gender</mat-label>
                             <input matInput name="gender" [(ngModel)]="emp.gender" #gender="ngModel">
                         </mat-form-field>

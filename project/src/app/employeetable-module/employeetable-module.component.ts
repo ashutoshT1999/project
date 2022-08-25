@@ -28,7 +28,7 @@ export class EmployeetableModuleComponent implements OnInit {
     this._empdata.getdata().subscribe((data) => { this.employeedatabyapi = data; });
   }
 
-  displayedColumns: string[] = ['code', 'fullname', 'Actions'];
+  displayedColumns: string[] = ['code', 'fullname','department', 'Actions'];
   // dataSource = this._empdata.getdata();
   // dataSource = this.employeedatabyapi;
 
