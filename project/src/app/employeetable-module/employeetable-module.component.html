@@ -27,7 +27,7 @@
                     [routerLink]="['/view',element.code]">{{element.btnview}}</button>
                 <button type="button" class="btn btn-outline-dark m-2"
                     [routerLink]="['/edit',element.code]">{{element.btnedit}}</button>
-                <button type="button" class="btn btn-outline-warning m-2"
+                <button type="button" style="background-color: red; color:white;" class="btn btn-outline-warning m-2"
                     (click)="openDialog('0ms', '0ms')">{{element.btndelete}}</button>
             </td>
         </ng-container>

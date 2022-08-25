@@ -7,7 +7,7 @@
             <ng-container *ngFor="let emp of empbyid">
                 <div class="d-flex justify-content-around">
                     <span class="m-3">
-                        <mat-form-field class="example-full-width " appearance="fill">
+                        <mat-form-field class="example-full-width " appearance="outline">
                             <mat-label>Employee code</mat-label>
                             <input matInput name="code" [(ngModel)]="emp.code" #code="ngModel">
                         </mat-form-field>
