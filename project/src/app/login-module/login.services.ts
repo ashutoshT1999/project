@@ -1,12 +1,19 @@
-import { Injectable } from "@angular/core";
+import { ObserversModule } from "@angular/cdk/observers";
+import { Injectable, OnInit } from "@angular/core";
+import { BehaviorSubject, observable, Observable, ReplaySubject, Subject } from "rxjs";
+
 
 @Injectable()
-export class loginServices {
+export class loginServices implements OnInit {
+
     loggedin: boolean = false;
+    loggedinObs: boolean = false;
+
 
     detail: any[] = [
         { email: "admin", password: "admin" }
     ]
+
 
     getdetails() {
         return this.detail;
@@ -18,8 +25,15 @@ export class loginServices {
         }
         else {
             this.loggedin = false;
-
         }
 
     }
+    ngOnInit(): void {
+    }
+
+
+
 }
+
+
+

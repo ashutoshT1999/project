@@ -5,6 +5,8 @@ import { NavbarModuleModule } from '../navbar-module/navbar-module.module';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from '../app-routing.module';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { productdataserviceApi } from '../product-service/product-data-api';
 
 
 
@@ -13,7 +15,7 @@ import { AppRoutingModule } from '../app-routing.module';
     ProductTableModuleComponent
   ],
   imports: [
-    CommonModule,NavbarModuleModule,MatTableModule,MatButtonModule,AppRoutingModule
+    CommonModule,NavbarModuleModule,MatTableModule,MatButtonModule,AppRoutingModule,HttpClientInMemoryWebApiModule.forRoot(productdataserviceApi)
   ],
   exports:[
     ProductTableModuleComponent

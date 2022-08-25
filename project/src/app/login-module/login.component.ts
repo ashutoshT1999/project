@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   sign: boolean = false;
 
   ngOnInit(): void {
-
+    
   }
   click() {
     this._details.verify(this.email, this.password);

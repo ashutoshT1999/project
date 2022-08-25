@@ -1,37 +1,44 @@
 <app-navbar></app-navbar>
 
-<div class="d-flex justify-content-center box">
-    <mat-card class="example-card">
-        <label style="font-size: 30px ;padding-bottom: 20px;">Extented Product Information</label>
-        <mat-divider></mat-divider>
-        <div class="d-flex justify-content-around flex-column mt-2">
-            <ng-container *ngFor="let prod of productdata">
-                <img mat-card-image
-                    src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1099&q=80"
-                    style="width:400px ;height:200px;margin: 10px ;">
-                <mat-card-title class="mb-3 p-2">Product Category : <span
-                        style="font-weight: normal ;">{{prod.productCategory}}</span>
-                </mat-card-title>
-                <mat-card-title class="mb-3 p-2">Product Name : <span
-                        style="font-weight: normal ;">{{prod.productName}}</span>
-                </mat-card-title>
-                <mat-card-title class="mb-3 p-2">Product Color : <span
-                        style="font-weight: normal ;">{{prod.productColor}}</span>
-                </mat-card-title>
-                <mat-card-title class="mb-3 p-2">Product Code : <span
-                        style="font-weight: normal ;">{{prod.productCode}}</span>
-                </mat-card-title>
-                <mat-card-title class="mb-3 p-2">In-Stock Quantity: <span
-                        style="font-weight: normal ;">{{prod.inStockQuantity}}</span>
-                </mat-card-title>
-                <mat-card-title class="mb-3 p-2">Price: <span style="font-weight: normal ;">{{prod.price}}</span>
-                </mat-card-title>
-                <mat-card-title class="mb-3 p-2">Product Description: <span
-                        style="font-weight: normal ;">{{prod.prodDescription}}</span>
-                </mat-card-title>
-                <button type="button" class="btn btn-outline-info" [routerLink]="['/prodtable']">Back to
-                    Product List</button>
-            </ng-container>
-        </div>
-    </mat-card>
+<div class="container" style="width: 900px;" >
+        <mat-card class="example-card">
+                <label style="font-size: 30px ;padding-bottom: 20px;">Extented Product Information</label>
+                <mat-divider></mat-divider>
+                <div class="d-flex justify-content-around flex-row mt-2">
+                        <ng-container *ngFor="let prod of productdata">
+                                <img mat-card-image
+                                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1099&q=80"
+                                        style="margin-top: 30px;
+                                        max-width: 420px;
+                                        max-height: 326px;">
+                                <div class="d-flex justify-content-around flex-column mt-2">
+                                        <mat-card-title class="mb-3 p-2">Product Category : <span
+                                                        style="font-weight: normal ;">{{prod.productCategory}}</span>
+                                        </mat-card-title>
+                                        <mat-card-title class="mb-3 p-2">Product Name : <span
+                                                        style="font-weight: normal ;">{{prod.productName}}</span>
+                                        </mat-card-title>
+                                        <mat-card-title class="mb-3 p-2">Product Color : <span
+                                                        style="font-weight: normal ;">{{prod.productColor}}</span>
+                                        </mat-card-title>
+                                        <mat-card-title class="mb-3 p-2">Product Code : <span
+                                                        style="font-weight: normal ;">{{prod.productCode}}</span>
+                                        </mat-card-title>
+                                        <mat-card-title class="mb-3 p-2">In-Stock Quantity: <span
+                                                        style="font-weight: normal ;">{{prod.inStockQuantity}}</span>
+                                        </mat-card-title>
+                                        <mat-card-title class="mb-3 p-2">Price: <span
+                                                        style="font-weight: normal ;">{{prod.price}}</span>
+                                        </mat-card-title>
+                                        <mat-card-title class="mb-3 p-2">Product Description: <span
+                                                        style="font-weight: normal ;">{{prod.prodDescription}}</span>
+                                        </mat-card-title>
+                                        <button type="button" class="btn btn-outline-info"
+                                                [routerLink]="['/prodtable']">Back to
+                                                Product List</button>
+                                </div>
+
+                        </ng-container>
+                </div>
+        </mat-card>
 </div>

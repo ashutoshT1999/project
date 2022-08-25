@@ -10,12 +10,14 @@ import { ProductTableModuleComponent } from './product-table-module/product-tabl
 import { ProductModuleComponent } from './product-module/product-module.component';
 import { ProductViewComponent } from './product-view/product-view.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { DeleteEmployeeComponentComponent } from './delete-employee-module/delete-employee-component.component';
 
 
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'employee', component: EmployeetableModuleComponent },
-  // { path: 'navbar', component: NavbarComponent },
+  {path:'deleteemp/:id',component:DeleteEmployeeComponentComponent},
+  { path: 'navbar', component: NavbarComponent },
   { path: 'prodform', component: ProductModuleComponent },
   { path: 'prodtable', component: ProductTableModuleComponent },
   { path: 'view/:id', component: ViewemployeeComponent },
