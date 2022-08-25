@@ -9,7 +9,7 @@ import { NavbarModuleModule } from './navbar-module/navbar-module.module';
 import { LoginModule } from './login-module/login.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupModule } from './signup/signup.module';
 import { MatDialogModule } from '@angular/material/dialog';
 
@@ -21,9 +21,17 @@ import { DialogSavedComponent } from './dialog-saved/dialog-saved.component';
 import { DialogDeleteConfirmComponent } from './dialog-delete-confirm/dialog-delete-confirm.component';
 import { DialogSaveAskComponent } from './dialog-save-ask/dialog-save-ask.component';
 import { DialogDeleteAskComponent } from './dialog-delete-ask/dialog-delete-ask.component';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { httpClientInMemBackendServiceFactory, HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 import { employeedatabyapi } from './employee-service/employee.api.component';
+import { ProductModuleModule } from './product-module/product-module.module';
+import { ProductTableModuleModule } from './product-table-module/product-table-module.module';
+import { productdataserviceApi } from './product-service/product-data-api';
+import { ProductViewModule } from './product-view/product-view.module';
+import { ProductEditModule } from './product-edit/product-edit.module';
+
+
+
 
 @NgModule({
   declarations: [
@@ -32,11 +40,12 @@ import { employeedatabyapi } from './employee-service/employee.api.component';
     DialogDeleteConfirmComponent,
     DialogSaveAskComponent,
     DialogDeleteAskComponent
+
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule, NavbarModuleModule, LoginModule, MatInputModule, MatFormFieldModule, FormsModule, SignupModule, MatDialogModule, EmployeetableModuleModule, ViewemployeeModuleModule, EditemployeeModuleModule, HttpClientInMemoryWebApiModule.forRoot(employeedatabyapi), HttpClientModule
+    BrowserModule,ProductViewModule,ProductEditModule,ReactiveFormsModule, ProductModuleModule,
+    AppRoutingModule, ProductTableModuleModule,
+    BrowserAnimationsModule, NavbarModuleModule, LoginModule, MatInputModule, MatFormFieldModule, FormsModule, SignupModule, MatDialogModule, EmployeetableModuleModule, ViewemployeeModuleModule, EditemployeeModuleModule, HttpClientInMemoryWebApiModule.forRoot(employeedatabyapi),HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

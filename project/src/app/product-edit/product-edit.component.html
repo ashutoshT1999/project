@@ -1,0 +1,116 @@
+<app-navbar></app-navbar>
+<div class="container" style="margin-top:50px;max-width:50%;">
+    <label for="productForm" style="margin-bottom:30px ;font-size:30px;">Product Registration Form</label>
+    <form id="productForm" [formGroup]='productForm'>
+        <div class="row">
+            <div class="col mb-2">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput name="email" formControlName="email">
+                    <mat-error *ngIf="productForm.get('email')!.value ==''">
+                        <span>Email is<strong> required</strong></span>
+                    </mat-error>
+                    <mat-error *ngIf=" productForm.get('email')!.errors!==null && !productForm.get('email')!.errors!['required']  && productForm.get('email')!.errors!['emailmismatch']">
+                        <span>Only Gmail Domain<strong> allowed</strong></span>
+                    </mat-error>
+
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Product Name</mat-label>
+                    <input matInput name="prodname" formControlName="prodname">
+                    <mat-error>
+                        <span>Name is<strong> required</strong></span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col mb-3">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Product Code</mat-label>
+                    <input matInput name="prodcode" formControlName="prodcode">
+                    <mat-error>
+                        <span>Product code is<strong> required</strong></span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Product Color</mat-label>
+                    <input matInput name="prodcolor" formControlName="prodcolor">
+                    <mat-error>
+                        <span>Product color is<strong> required</strong></span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col mb-3">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Product Category</mat-label>
+                    <mat-select name="prodcategory" formControlName="prodcategory">
+                        <mat-option value="Electronics">Electronics</mat-option>
+                        <mat-option value="clothing">clothing</mat-option>
+                        <mat-option value="Food">Food</mat-option>
+                        <mat-option value="Festive Season">Festive Season</mat-option>
+                        <mat-option value="Automobile">Automobile</mat-option>
+                    </mat-select>
+                    <mat-error>
+                        <span>Product Category is<strong> required</strong></span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col mb-3">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Price</mat-label>
+                    <input type="number" matInput name="prodprice" formControlName="prodprice">
+                    <mat-error
+                        *ngIf="productForm.get('prodprice')!.errors!==null && productForm.get('prodprice')!.errors!['min']">
+                        <span>Price must be <strong> between 1,000 to 10,000</strong></span>
+                    </mat-error>
+                    <mat-error
+                        *ngIf="productForm.get('prodprice')!.errors!==null && productForm.get('prodprice')!.errors!['max']">
+                        <span>Price must be <strong> between 1,000 to 10,000</strong></span>
+                    </mat-error>
+                    <mat-error
+                        *ngIf="productForm.get('prodprice')!.errors!==null && productForm.get('prodprice')!.errors!['required']">
+                        <span>Price is<strong> required</strong></span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col mb-3">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>InStock Quantity</mat-label>
+                    <input type="number" matInput name="prodquantity" formControlName="prodquantity">
+                    <mat-error>
+                        <span>InStock Quantity is<strong> required</strong></span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Product Description</mat-label>
+                        <textarea matInput name="profdescription" formControlName="profdescription"></textarea>
+                        <mat-error>
+                            <span>Product Description is<strong> required</strong></span>
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="submit" [routerLink]="['/prodtable']" mat-raised-button color="primary">Back to Product List</button>
+            </div>
+        </div>
+
+    </form>
+</div>

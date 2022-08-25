@@ -6,6 +6,7 @@ import { NavbarModuleModule } from '../navbar-module/navbar-module.module';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 
@@ -14,7 +15,7 @@ import { AppRoutingModule } from '../app-routing.module';
     EditemployeeComponent
   ],
   imports: [
-    CommonModule, MatCardModule,MatInputModule,NavbarModuleModule,FormsModule, AppRoutingModule 
+    CommonModule, MatCardModule,MatInputModule,NavbarModuleModule,FormsModule, AppRoutingModule ,MatDividerModule
   ],
   exports: [
     EditemployeeComponent

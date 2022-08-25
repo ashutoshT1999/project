@@ -2,7 +2,7 @@
     <div class="form-container sign-in-container">
         <form action="#" #login="ngForm" (ngSubmit)="saveLogin(login)">
             <h1 style="font-size:35px;margin-bottom: 40px;">Sign in</h1>
-            <mat-form-field style="margin-bottom:15px;" class="example-full-width">
+            <mat-form-field style="margin-bottom:15px;" class="example-full-width" >
                 <input matInput type="email" placeholder="Email" name="email" [(ngModel)]="email" 
                     #emailinput="ngModel">
                 <!-- <mat-error *ngIf="emailinput.hasError('required')">

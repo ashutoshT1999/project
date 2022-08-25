@@ -14,7 +14,6 @@ export class EditemployeeComponent implements OnInit {
 
   empid: string | null = "";
   empbyid: any[] = [];
-  empbyapi: any[] = [];
   constructor(private _route: ActivatedRoute, private _empservice: empdata, public dialog: MatDialog) { }
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
