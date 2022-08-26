@@ -5,31 +5,26 @@ import { loginServices } from './login-module/login.services';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [loginServices]
 })
 export class AppComponent implements OnInit {
   title = 'project';
   loggedin: boolean = false;
+  // loggedout: boolean = false;
+
+
 
   constructor(private _login: loginServices) {
 
   }
   ngOnInit(): void {
-  
+    this._login.loggedin$.subscribe((data: boolean) => {
+      this.loggedin = data;
+    })
+    this._login.navbar$.subscribe((data: boolean) => {
+      this.loggedin = data;
+    })
+
+
   }
-
-  // @Input()
-  // isloggedin: boolean = false;
-
-  // @Input()
-  // signup: boolean = false;
-
-
-  // isuserloggedin(value: boolean) {
-  //   this.isloggedin = value;
-  // }
-  // issignup(value: boolean) {
-  //   this.signup = value;
-  // }
 
 }

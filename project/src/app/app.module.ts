@@ -31,6 +31,7 @@ import { ProductViewModule } from './product-view/product-view.module';
 import { ProductEditModule } from './product-edit/product-edit.module';
 import { DeleteEmployeeModuleModule } from './delete-employee-module/delete-employee-module.module';
 import { NavbarComponent } from './navbar-module/navbar.component';
+import { loginServices } from './login-module/login.services';
 
 
 
@@ -49,7 +50,7 @@ import { NavbarComponent } from './navbar-module/navbar.component';
     AppRoutingModule, ProductTableModuleModule,
     BrowserAnimationsModule, NavbarModuleModule, LoginModule, MatInputModule, MatFormFieldModule, FormsModule, SignupModule, MatDialogModule, EmployeetableModuleModule, ViewemployeeModuleModule, EditemployeeModuleModule, HttpClientInMemoryWebApiModule.forRoot(employeedatabyapi), HttpClientModule
   ],
-  providers: [],
+  providers: [loginServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

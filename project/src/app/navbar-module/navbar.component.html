@@ -7,8 +7,9 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link active" routerLink="/employee" href="#">Employee Table</a>
-            <!-- <a class="nav-item nav-link active" routerLink="/prodform" href="#">Product Form</a> -->
             <a class="nav-item nav-link active" routerLink="/prodtable" href="#">Product Table</a>
         </div>
     </div>
+    <div class="me-2 p-2 bd-highlight"><span style="margin-right: 50px;font-size: larger;">Hello! {{username}}</span></div>
+    <div class="me-2 p-2 bd-highlight"><button mat-raised-button color="primary" style="margin-right: 20px;" [routerLink]="['']" (click)="clicknavbar()">Log Out</button></div>
 </nav>
