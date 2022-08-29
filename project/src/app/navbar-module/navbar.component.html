@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #ee8c7a !important;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e74c3c !important;">
     <a class="navbar-brand" href="#">Pre-Capstone</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -6,10 +6,27 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" routerLink="/employee" href="#">Employee Table</a>
-            <a class="nav-item nav-link active" routerLink="/prodtable" href="#">Product Table</a>
+            <a class="nav-item nav-link active" routerLink="/employee" href="#" style="font-size: 15px;">Employee Table</a>
+            <a class="nav-item nav-link active" routerLink="/prodtable" href="#" style="font-size: 15px;">Product Table</a>
         </div>
     </div>
-    <div class="me-2 p-2 bd-highlight"><span style="margin-right: 50px;font-size: larger;">Hello! {{username}}</span></div>
-    <div class="me-2 p-2 bd-highlight"><button mat-raised-button color="primary" style="margin-right: 20px;" [routerLink]="['']" (click)="clicknavbar()">Log Out</button></div>
+    <div class="me-2 bd-highlight d-flex justify-content-end">
+        <div class="flex-row bd-highlight">
+            <span style="font-size: larger;"><img
+                    src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    style="width: 50px ;height:50px;border-radius:50%;">
+            </span>
+        </div>
+    </div>
+    <div class="flex-row bd-highlight">
+        <div ngbDropdown class="dropdown">
+            <a href (click)="false" class="nav-link" ngbDropdownToggle style="margin-right: 100px;font-size:20px;">Hey!&#9996; {{username}}</a>
+            <ul ngbDropdownMenu aria-labelledby="dropdownMenuButton1" style="background-color:#e74c3c !important;">
+              <li><a ngbDropdownItem href="#">Profile</a></li>
+              <li><a ngbDropdownItem href="#">Another action</a></li>
+              <mat-divider></mat-divider>
+              <li><a ngbDropdownItem [routerLink]="['']" (click)="clicknavbar()">Log Out</a></li>
+            </ul>
+          </div>
+    </div>
 </nav>

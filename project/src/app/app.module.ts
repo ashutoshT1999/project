@@ -32,6 +32,7 @@ import { ProductEditModule } from './product-edit/product-edit.module';
 import { DeleteEmployeeModuleModule } from './delete-employee-module/delete-employee-module.module';
 import { NavbarComponent } from './navbar-module/navbar.component';
 import { loginServices } from './login-module/login.services';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -48,7 +49,7 @@ import { loginServices } from './login-module/login.services';
   imports: [
     BrowserModule, ProductViewModule, ProductEditModule, ReactiveFormsModule, ProductModuleModule, DeleteEmployeeModuleModule,
     AppRoutingModule, ProductTableModuleModule,
-    BrowserAnimationsModule, NavbarModuleModule, LoginModule, MatInputModule, MatFormFieldModule, FormsModule, SignupModule, MatDialogModule, EmployeetableModuleModule, ViewemployeeModuleModule, EditemployeeModuleModule, HttpClientInMemoryWebApiModule.forRoot(employeedatabyapi), HttpClientModule
+    BrowserAnimationsModule, NavbarModuleModule, LoginModule, MatInputModule, MatFormFieldModule, FormsModule, SignupModule, MatDialogModule, EmployeetableModuleModule, ViewemployeeModuleModule, EditemployeeModuleModule, HttpClientInMemoryWebApiModule.forRoot(employeedatabyapi), HttpClientModule, NgbModule
   ],
   providers: [loginServices],
   bootstrap: [AppComponent]
